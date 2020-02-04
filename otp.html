@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+        integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>OTP</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="otp.css">
+</head>
+
+<body>
+    <div class="mx-2">
+        <div class="mt-4 mb-5 ml-2">
+            <a href="loginpage.html" class="text-secondary"><i class="fas fa-arrow-left"></i></a>
+            <h4 class="font-weight-bold">VERIFY DETAILS</h4>
+            <span class="otp">OTP Sent to 6300754683</span>
+        </div>
+        <small class="otp ml-3">ENTER OTP</small> <br>
+        <div id="wrapper">
+            <div id="form">
+                <input type="text" class="most" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <input type="text" class="most" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <input type="text" class="most" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <input type="text" class="most" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <input type="text" class="most" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <input type="text" class="most" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+            </div>
+        </div> <br>
+        <span class="text-secondary ml-4">Didn't receive the OTP? <a href="#">VERIFY VIA CALL</a></span>
+        <a href="../user App/index.html" class="btn  text-white font-weight-bold mx-2 mt-3 py-2  addnew">ENTER OTP</a>
+
+    </div>
+
+
+
+    <script>
+        $(function () {
+            'use strict';
+
+            var body = $('body');
+
+            function goToNextInput(e) {
+                var key = e.which,
+                    t = $(e.target),
+                    sib = t.next('input');
+
+                if (key != 9 && (key < 48 || key > 57)) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                if (key === 9) {
+                    return true;
+                }
+
+                if (!sib || !sib.length) {
+                    sib = body.find('input').eq(0);
+                }
+                sib.select().focus();
+            }
+
+            function onKeyDown(e) {
+                var key = e.which;
+
+                if (key === 9 || (key >= 48 && key <= 57)) {
+                    return true;
+                }
+
+                e.preventDefault();
+                return false;
+            }
+
+            function onFocus(e) {
+                $(e.target).select();
+            }
+
+            body.on('keyup', 'input', goToNextInput);
+            body.on('keydown', 'input', onKeyDown);
+            body.on('click', 'input', onFocus);
+
+        })
+    </script>
+</body>
+
+</html>

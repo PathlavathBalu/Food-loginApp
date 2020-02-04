@@ -1,0 +1,55 @@
+/* marquee{
+    background-color:#efefed;
+} */
+body {
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box;
+    background: #f7f8fc;
+  }
+.skip {
+    border-radius: 30%;
+    font-size: 20px;
+} 
+.media {
+    width: 90%;
+    color: #000;
+    font-size: 20px;
+}
+.social {
+    width: 13%;
+} 
+.account {
+    font-size: 18px;
+}
+/*---- Login Page ---*/
+input[type="text"]
+{
+    border: 0;
+    border-bottom: 1px solid red;
+    outline: 0;
+}
+.text {
+  font-size: 19px;
+}
+.Login-page {
+  margin-top: -140px;
+}
+.enter {
+    font-size: 17px;
+}
+.allrestaurant {
+    width: 95%;
+    font-size: 20px;
+}
+/* Sign up */
+input[type="text"]
+{
+    border: 0;
+    border-bottom: 1px solid red;
+    outline: 0;
+}
+.most {
+    color: #7d7e84;
+    font-size: 16px;
+    background: #f7f8fc;
+}

@@ -1,0 +1,25 @@
+.otp {
+    font-size: 16px;
+    color: #676767;
+}
+
+#wrapper {
+    font-family: Lato;
+    font-size: 1.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    color: #333;
+}
+
+input[type="text"] {
+    border: 0;
+    border-bottom: 1px solid #676767;
+    outline: 0;
+    padding: 9px;
+    margin: 4px;
+}
+.addnew {
+    width: 95%;
+    background: #8e481e;
+    font-size: 16px; 
+}
